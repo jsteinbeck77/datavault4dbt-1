@@ -68,9 +68,15 @@ vars:
 models:
   datavault4dbt:
     # Config indicated by + and applies to all files under models/example/
-    dbt_stg:
-      +schema: <name of your Staging schema>
+    load:
+      +schema: LOAD
       +materialized: view
-    raw_vault:
-      +schema: <name of your RDV schema>
+    stage:
+      +schema: STG
+      +materialized: view
+    rv:
+      +schema: RV
+      +materialized: table
+    bv:
+      +schema: BV
       +materialized: table

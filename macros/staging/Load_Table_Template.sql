@@ -5,6 +5,6 @@ SELECT
     , '{{ BKCC }}'      AS BKCC
     , *
 FROM 
-    {{ source(Source_Name, Table_Name) }}
+    {{ source(Source_Name|upper, Table_Name|upper) }}
 
 {% endmacro %}
