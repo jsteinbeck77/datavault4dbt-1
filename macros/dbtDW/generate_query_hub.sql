@@ -2,7 +2,7 @@
    {%- set record_hash = generate_columns_hash_md5(columns, "'||'", False, "'-1'") -%}
    {%- set column_values_string = generate_columns_list(columns, upper_case=False, delimiter="'||'") -%} 
 
-  SELECT
+  SELECT DISTINCT
     {{ record_hash }} AS {{ table_name }}_HK,
     CURRENT_TIMESTAMP() AS load_date,
     {{ record_source }} AS record_source,
