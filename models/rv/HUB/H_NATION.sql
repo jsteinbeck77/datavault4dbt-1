@@ -8,4 +8,3 @@ FROM
  select * FROM 
     {{ ref('ld_tpch_NATION') }}
 #}    
- 
