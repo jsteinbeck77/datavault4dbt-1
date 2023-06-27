@@ -24,6 +24,9 @@ clean-targets:         # directories to be removed by `dbt clean`
 
 
 vars:
+
+  snowflake_macros: snowflake_macros.sql
+
   #Column Aliases
   datavault4dbt.ldts_alias: 'ldts'
   datavault4dbt.rsrc_alias: 'rsrc'
